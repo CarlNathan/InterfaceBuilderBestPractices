@@ -10,38 +10,41 @@ import UIKit
 
 class ProgramaticView: UIView {
     
-    @IBInspectable var text: String = "" {
+    @IBInspectable var text: String {
         didSet {
             self.label.text = text
         }
     }
     
-    private let label = UILabel()
-    
-    convenience init(color: UIColor, text: String) {
-        self.init(frame: CGRect.zero)
-        setupView()
-        self.label.textColor = color
-        self.text = text
+    @IBInspectable var color: UIColor {
+        didSet {
+            self.label.textColor = color
+        }
     }
     
+    private let label = UILabel()
+    
     override init(frame: CGRect) {
+        self.text = "TEMP"
+        self.color = .red
         super.init(frame: frame)
         setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
+        self.text = "TEMP"
+        self.color = .red
         super.init(coder: aDecoder)
         setupView()
     }
     
     private func setupView() {
-        self.label.textColor = UIColor.green
         self.label.textAlignment = .center
+        self.backgroundColor = .cyan
+        self.addSubview(self.label)
     }
     
     override func layoutSubviews() {
         self.label.frame = self.bounds
     }
-
 }

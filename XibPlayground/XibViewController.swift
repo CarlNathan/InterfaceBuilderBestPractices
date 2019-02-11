@@ -11,13 +11,11 @@ import UIKit
 class XibViewController: UIViewController {
 
     let immutableProperty: Int
-    let programaticView = ProgramaticView(color: UIColor.purple, text: "Hello Again")
+    let programaticView = ProgramaticView(frame: .zero)
     private let privateProperty: Int
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var programaticViewFromIB: ProgramaticView!
-    
-    
     
     init(injectedParameter1: Int, injectedParameter2: Int) {
         self.immutableProperty = injectedParameter1
@@ -36,6 +34,8 @@ class XibViewController: UIViewController {
     }
     
     private func setupView() {
+        programaticView.text = "From Code"
+        programaticView.color = .orange
         view.addSubview(programaticView)
     }
     

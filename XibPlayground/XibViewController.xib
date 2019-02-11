@@ -35,7 +35,10 @@
                         <constraint firstAttribute="height" constant="100" id="wJo-EA-jBY"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="From IB"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.98913894406604974" green="0.26383656564190094" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
