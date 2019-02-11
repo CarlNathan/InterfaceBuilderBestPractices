@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XibViewController" customModule="XibPlayground" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="CCh-BM-3jO" id="wlt-Qr-dAJ"/>
+                <outlet property="programaticViewFromIB" destination="8j4-aY-J2V" id="D4p-r2-W0c"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCh-BM-3jO">
+                    <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8j4-aY-J2V" customClass="ProgramaticView" customModule="XibPlayground" customModuleProvider="target">
+                    <rect key="frame" x="30" y="70" width="315" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="wJo-EA-jBY"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8j4-aY-J2V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="2iB-RZ-tBb"/>
+                <constraint firstItem="8j4-aY-J2V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="EeM-xe-rd0"/>
+                <constraint firstItem="CCh-BM-3jO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GwD-RX-GcE"/>
+                <constraint firstItem="CCh-BM-3jO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iDZ-Sb-9RD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8j4-aY-J2V" secondAttribute="trailing" constant="30" id="iMn-ml-3eE"/>
+                <constraint firstItem="8j4-aY-J2V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="szg-ec-wai"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
